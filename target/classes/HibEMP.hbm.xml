@@ -1,0 +1,35 @@
+<?xml version='1.0'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+
+    <class name="HibEMP" table="EMP">
+        <id name="id" type="long" column="EMPNO" >
+        </id>
+
+        <property name="name" >
+            <column name="ENAME" />
+        </property>
+        <property name="job" >
+            <column name="JOB" />
+        </property>
+        <property name="manager" >
+            <column name="MGR" />
+        </property>
+        <property name="date" >
+            <column name="HIREDATE" />
+        </property>
+        <property name="sal" >
+            <column name="SAL" />
+        </property>
+        <property name="comm" >
+            <column name="COMM" />
+        </property>
+        <many-to-one name="dept" class="entity.HibDEPT">
+            <column name="DEPTNO" />
+        </many-to-one>
+    </class>
+
+</hibernate-mapping>

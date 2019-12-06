@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+
+    <class name="HibSALGRAGE" table="SALGRADE">
+        <id name="id" type="long" column="GRADE" >
+        </id>
+
+        <property name="losal" >
+            <column name="LOSAL" />
+        </property>
+        <property name="hisal" >
+            <column name="HISAL" />
+        </property>
+    </class>
+
+</hibernate-mapping>
